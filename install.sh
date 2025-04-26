@@ -16,7 +16,7 @@ After=network-online.target
 User=$filename
 Group=$filename
 Type=simple
-ExecStart=/usr/local/bin/$filename -config.file=/etc/$filename/config.yaml
+ExecStart=/usr/local/bin/$filename --web.listen-address=:9123
 Restart=on-failure
 RestartSec=10
 
